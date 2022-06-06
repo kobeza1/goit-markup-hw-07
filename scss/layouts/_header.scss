@@ -1,34 +1,44 @@
 /* ----- HEADER ----- */
 
 .header {
-    border-bottom: 1px solid #ececec;
-    /*outline: 1px solid tomato;*/
+  border-bottom: 1px solid #ececec;
+  /*outline: 1px solid tomato;*/
+}
+
+.logo-header {
+  margin-right: 93px;
+}
+
+.header-container,
+.navigation,
+.navigation__list {
+  @extend %flexcenter;
+}
+
+.navigation__link {
+  position: relative;
+  padding-top: 32px; /* поставил padding и сюда (помимо всей секции) , чтоб расширить область при наведении курсора */
+  padding-bottom: 32px;
+
+  color: var(--primary-font-color);
+
+  @include font(14px, 500, 1.14, 0.02em);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
-  
-  .header-container,
-  .navigation,
-  .navigation__list {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navigation__link {
-    position: relative;
-    padding-top: 32px; /* поставил padding и сюда (помимо всей секции) , чтоб расширить область при наведении курсора */
-    padding-bottom: 32px;
-  
-    color: var(--primary-font-color);
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    transition: color var(--duration) var(--timing-function);
-  }
-  
-  .navigation__link--current::after {
+}
+
+.navigation__link--current {
+  color: var(--accent-color);
+
+  &::after {
     position: absolute;
     left: 0;
     bottom: 0;
-  
+
     display: block;
     content: "";
     width: 100%;
@@ -37,51 +47,45 @@
     border-radius: 2px;
     margin-bottom: -1px;
   }
-  
-  .navigation__link--current {
-    color: var(--accent-color);
-  }
-  
-  .navigation__item,
-  .hcontacts__item {
-    margin-right: 50px;
-  }
-  
-  .navigation__item:last-child,
-  .hcontacts__item:last-child {
+}
+
+.navigation__item {
+  margin-right: 50px;
+
+  &:last-child {
     margin-right: 0;
   }
-  
-  .hcontacts {
-    display: flex;
-    align-items: center;
-  
-    margin-left: auto;
+}
+
+.hcontacts__item {
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
   }
-  
-  .hcontacts__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 32px; /* поставил padding и сюда (помимо всей секции) , чтоб расширить область при наведении курсора */
-    padding-bottom: 32px;
-  
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--description-font-color);
-    /* transition: color var(--duration) var(--timing-function); */
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .hcontacts__icon {
-    margin-right: 10px;
-    fill: currentColor;
-  }
-  
-  .navigation__link:hover,
-  .navigation__link:focus,
-  .hcontacts__link:hover,
-  .hcontacts__link:focus {
+}
+
+.hcontacts {
+  @extend %flexcenter;
+  margin-left: auto;
+}
+
+.hcontacts__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--description-font-color);
+
+  @extend %flexcenter;
+  @include font(14px, 500, 1.14, 0.02em);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
     color: var(--accent-color);
   }
+}
+
+.hcontacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

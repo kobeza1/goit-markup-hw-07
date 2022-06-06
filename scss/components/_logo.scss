@@ -1,21 +1,14 @@
 .logo {
-    margin-right: 93px;
-  
-    font-family: var(--logo-font);
-    color: var(--primary-font-color);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-  }
-  
-  .logo span {
-    color: var(--accent-color);
-  }
+  font-family: var(--logo-font);
+  color: var(--accent-color);
 
-  .logo-footer {
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-right: 0;
-    color: var(--secondary-font-color);
-  }
+  @include font(26px, 700, 1.19, 0.03em);
+}
+
+.logo--black {
+  color: var(--primary-font-color);
+}
+
+.logo--white {
+  color: var(--secondary-font-color);
+}

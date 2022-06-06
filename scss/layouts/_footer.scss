@@ -1,82 +1,66 @@
 /* ----- FOOTER ----- */
 
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: var(--background-color-secondary);
-  }
-  
-  .container--baseline {
-    display: flex;
-    align-items: baseline;
-  }
-  
-  .footer__socials-container {
-    flex-grow: 1;
-    margin-right: 93px;
-  }
-  
-  .fcontacts__item {
-    margin-bottom: 9px;
-  }
-  
-  .fcontacts__link {
-    display: inline-block;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: var(--description-font-color);
-  }
-  
-  .fcontacts__link--white {
-    color: var(--secondary-font-color);
-  }
-  
-  .footer__text {
-    color: var(--secondary-font-color);
-    margin-bottom: 20px;
-  }
-  
-  .socials__link--inverse {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--secondary-font-color);
-  }
-  
-  .socials__link--inverse:hover,
-  .socials__link--inverse:focus {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-color-secondary);
+}
+
+.container--baseline {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer__socials-container {
+  flex-grow: 1;
+  margin-right: 93px;
+}
+
+.fcontacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.fcontacts__link {
+  display: inline-block;
+
+  @include font(14px, 400, 1.71, 0.03em);
+
+  color: var(--description-font-color);
+}
+
+.fcontacts__link--white {
+  color: var(--secondary-font-color);
+}
+
+.footer__text {
+  color: var(--secondary-font-color);
+  margin-bottom: 20px;
+}
+
+.socials__link--inverse {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--secondary-font-color);
+
+  &:hover,
+  &:focus {
     background-color: var(--accent-color);
   }
-  
-  .footer__contacts-container {
-    margin-right: 70px;
-  }
-  
-  .footer-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer-btn__icon {
-    fill: var(--secondary-font-color);
-    margin-left: 10px;
-  }
-  
-  .footer-form {
-    display: flex;
-  }
-  
-  .footer-form__input {
-    width: 358px;
-    /* height: 50px; */
-    margin-right: 12px;
-    padding: 16px 15px;
-  
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: transparent;
-    outline: transparent;
-    color: #ffffff;
-  }
+}
+
+.footer__contacts-container {
+  margin-right: 70px;
+}
+
+.footer-btn {
+  @extend %flexcenter;
+}
+
+.footer-btn__icon {
+  fill: var(--secondary-font-color);
+  margin-left: 10px;
+}

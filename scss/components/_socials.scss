@@ -1,23 +1,18 @@
 /* ----- social links ----- */
 
 .socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flexcenter;
 }
 
 .socials__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flexcenter;
   width: 44px;
   height: 44px;
   border-radius: 50%;
 
   background-color: var(--background-color-primary);
   color: var(--icon-color);
-  transition: color var(--duration) var(--timing-function),
-    background-color var(--duration) var(--timing-function);
+  @include transition(color, background-color);
 
   &:hover,
   &:focus {
