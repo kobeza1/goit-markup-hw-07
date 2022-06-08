@@ -60,11 +60,11 @@
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   @include transition(transform);
-}
 
-.projects__link:hover .projects__overlay,
-.projects__link:focus .projects__overlay {
-  transform: translateY(0);
+  .projects__link:hover &,
+  .projects__link:focus & {
+    transform: translateY(0);
+  }
 }
 
 .projects__textgroup {

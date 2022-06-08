@@ -5,11 +5,11 @@
   /*outline: 1px solid tomato;*/
 }
 
-.logo-header {
+.header__logo {
   margin-right: 93px;
 }
 
-.header-container,
+.header__container,
 .navigation,
 .navigation__list {
   @extend %flexcenter;

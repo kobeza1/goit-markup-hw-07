@@ -25,9 +25,9 @@
   <body>
     <!--HEADER-->
     <header class="header">
-      <div class="container header-container">
-        <a class="logo logo-header" href="./index.html" lang="en"
-          >Web<span class="logo--black">Studio</span></a
+      <div class="container header__container">
+        <a class="logo header__logo" href="./index.html" lang="en"
+          >Web<span class="logo__black">Studio</span></a
         >
         <nav class="navigation">
           <ul class="navigation__list">
@@ -69,10 +69,9 @@
     <main>
       <!--HERO-->
       <section class="hero">
-        <div class="container hero-container">
-          <h1 class="hero__title visually-hidden">Вебстудия</h1>
-          <p class="hero__text">Эффективные решения для вашего бизнеса</p>
-          <button class="btn" type="button" data-modal-open>
+        <div class="container">
+          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+          <button class="btn hero__btn" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -191,7 +190,7 @@
         </div>
       </section>
       <!--OUR TEAM-->
-      <section class="section section--color">
+      <section class="section section--other-color">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
@@ -203,8 +202,8 @@
                 height="260"
               />
               <div class="team__container">
-                <h3 class="team__name">Игорь Демьяненко</h3>
-                <p class="team__position" lang="en">Product Designer</p>
+                <h3 class="team__title">Игорь Демьяненко</h3>
+                <p class="team__text" lang="en">Product Designer</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a
@@ -269,8 +268,8 @@
                 height="260"
               />
               <div class="team__container">
-                <h3 class="team__name">Ольга Репина</h3>
-                <p class="team__position" lang="en">Frontend Developer</p>
+                <h3 class="team__title">Ольга Репина</h3>
+                <p class="team__text" lang="en">Frontend Developer</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a
@@ -335,8 +334,8 @@
                 height="260"
               />
               <div class="team__container">
-                <h3 class="team__name">Николай Тарасов</h3>
-                <p class="team__position" lang="en">Marketing</p>
+                <h3 class="team__title">Николай Тарасов</h3>
+                <p class="team__text" lang="en">Marketing</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a
@@ -401,8 +400,8 @@
                 height="260"
               />
               <div class="team__container">
-                <h3 class="team__name">Михаил Ермаков</h3>
-                <p class="team__position" lang="en">UI Designer</p>
+                <h3 class="team__title">Михаил Ермаков</h3>
+                <p class="team__text" lang="en">UI Designer</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a
@@ -553,8 +552,8 @@
     <footer class="footer">
       <div class="container container--baseline">
         <div class="footer__contacts-container">
-          <a class="logo logo-footer" href="./index.html"
-            >Web<span class="logo--white">Studio</span></a
+          <a class="logo footer__logo" href="./index.html"
+            >Web<span class="logo__white">Studio</span></a
           >
           <address class="fcontacts">
             <ul class="fcontacts__list">
@@ -644,9 +643,9 @@
               name="mail"
               placeholder="E-mail"
             />
-            <button class="footer-btn btn" type="submit">
+            <button class="footer__btn btn" type="submit">
               Подписаться
-              <svg class="footer-btn__icon" width="24" height="24">
+              <svg class="footer__btn-icon" width="24" height="24">
                 <use href="./images/icons/sprite.svg#send"></use>
               </svg>
             </button>

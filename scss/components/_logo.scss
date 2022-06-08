@@ -5,10 +5,10 @@
   @include font(26px, 700, 1.19, 0.03em);
 }
 
-.logo--black {
+.logo__black {
   color: var(--primary-font-color);
 }
 
-.logo--white {
+.logo__white {
   color: var(--secondary-font-color);
 }

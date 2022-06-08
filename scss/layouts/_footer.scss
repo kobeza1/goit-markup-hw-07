@@ -11,7 +11,7 @@
   align-items: baseline;
 }
 
-.logo-footer {
+.footer__logo {
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -38,6 +38,8 @@
 }
 
 .footer__text {
+  @include font(14px, 700, 1.14, 0.03em);
+  text-transform: uppercase;
   color: var(--secondary-font-color);
   margin-bottom: 20px;
 }
@@ -56,11 +58,11 @@
   margin-right: 70px;
 }
 
-.footer-btn {
+.footer__btn {
   @extend %flexcenter;
 }
 
-.footer-btn__icon {
+.footer__btn-icon {
   fill: var(--secondary-font-color);
   margin-left: 10px;
 }
